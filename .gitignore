@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+coverage/
+.turbo/
+.vercel/
+*.tsbuildinfo
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+
+# Editor and system files
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
