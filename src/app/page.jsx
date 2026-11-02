@@ -174,8 +174,24 @@ export default function Home(){
  const title=mode==='quote'?'Proposed client quote':mode==='product'?'New product economics':decisionModeConfig[mode].title;
  const nameLabel=mode==='quote'?'Quote / contract name':mode==='product'?'Product idea':decisionModeConfig[mode].nameLabel;
  return <main>
-  <header className="top"><div className="brand"><span className="brandMark">F</span><span>FailFirst <em>AI</em></span></div><span className="subhead">PRIVATE PREVIEW · HACKATHON MVP</span></header>
-  <section className="hero"><div className="eyebrow">BUSINESS DECISION STRESS TESTING</div><h1>Break the plan.<br/><span>Not the business.</span></h1><p>Challenge hidden assumptions before money is committed. Real arithmetic first. AI hypotheses clearly labeled.</p></section>
+  <header className="top"><div className="brand"><span className="brandMark">F</span><span>FailFirst <em>AI</em></span></div><span className="subhead">META AI HACKATHON · WORKING PROTOTYPE</span></header>
+  <section className="hero heroPitch" aria-labelledby="hero-title">
+   <div className="heroPitchCopy">
+    <div className="eyebrow">DECISION INTELLIGENCE FOR THE AI ERA</div>
+    <h1 id="hero-title">AI helps us <span>build faster.</span><br/>Let's decide <span>more wisely.</span></h1>
+    <p className="heroLead">AI makes it easier than ever to solve problems, automate work, and create new businesses. But more opportunities mean more decisions, and more ways to waste time, money, and resources.</p>
+    <p className="heroPromise"><strong>What if we could test a decision before paying for the mistake?</strong> FailFirst AI challenges assumptions, calculates possible financial outcomes, and helps you explore alternatives before you commit.</p>
+    <div className="heroActions"><a className="heroPrimary" href="#decision-workspace">Stress-test a decision <span aria-hidden="true">→</span></a><span className="heroMicro">8 decision types · Transparent calculations · Meta AI risk hypotheses</span></div>
+   </div>
+   <aside className="heroPitchSide" aria-label="How FailFirst AI works">
+    <div className="pitchSideEyebrow">FROM OPPORTUNITY TO INFORMED ACTION</div>
+    <div className="pitchStep"><span className="pitchNumber">01</span><div><strong>Challenge the plan</strong><p>Reveal assumptions and plausible hidden risks.</p></div></div>
+    <div className="pitchStep"><span className="pitchNumber">02</span><div><strong>Calculate the downside</strong><p>See stress-tested profit, break-even points, and sensitivity.</p></div></div>
+    <div className="pitchStep"><span className="pitchNumber">03</span><div><strong>Explore a better path</strong><p>Test changes before committing real resources.</p></div></div>
+    <div className="pitchTruth">AI proposes hypotheses. Deterministic code calculates the impact. <strong>Scenarios, not predictions.</strong></div>
+   </aside>
+  </section>
+  <div className="workspaceIntro" id="decision-workspace"><div><div className="eyebrow">TRY IT WITH YOUR NUMBERS</div><h2>Break the plan. <span>Not the business.</span></h2></div><p>Choose a decision, adjust the assumptions, and explore what could go wrong.</p></div>
   <div className="tabs">{modeList.map(item=><button key={item.id} className={mode===item.id?'active':''} onClick={()=>{cancelPending();setMode(item.id);setAi(null);setError('')}}><span className="tabNumber">{item.number}</span>{item.label}</button>)}</div>
   <div className="layout"><section className="panel inputs"><div className="sectionHeading"><div><div className="eyebrow">INPUT ASSUMPTIONS</div><h2>{title}</h2></div><button className="minimal" onClick={reset}>Reset example</button></div>
    <label className="field"><span>{nameLabel}</span><input value={input.business||''} onChange={e=>update('business',e.target.value)}/></label>

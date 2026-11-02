@@ -123,3 +123,30 @@
  .impactScenario{max-width:100%}
  .aiRiskBody{padding-left:16px}
 }
+
+
+/* v0.11: The idea behind FailFirst AI, made visible without changing the engine. */
+.heroPitch{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(290px,.8fr);gap:32px;align-items:center;padding:48px 0 40px}
+.heroPitchCopy{min-width:0}
+.heroPitch h1{font-size:clamp(37px,4.3vw,61px);line-height:1.08;letter-spacing:-2.3px;margin:17px 0 22px}
+.heroPitch .heroLead{font-size:clamp(15px,1.45vw,18px);line-height:1.65;color:#344a42;max-width:720px;margin:0 0 14px}
+.heroPitch .heroPromise{font-size:14px;line-height:1.7;color:#52685e;max-width:720px;margin:0 0 22px}
+.heroPromise strong{color:#142f26}
+.heroActions{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.heroPrimary{display:inline-flex;align-items:center;gap:14px;background:#0b6f5b;color:#fff;text-decoration:none;font-size:13px;font-weight:800;padding:14px 19px;border-radius:10px;transition:background .15s ease}
+.heroPrimary:hover,.heroPrimary:focus-visible{background:#094d40}
+.heroMicro{font-size:11px;color:#687d72;line-height:1.5;max-width:260px}
+.heroPitchSide{background:#113d34;color:#fff;border-radius:18px;padding:26px;box-shadow:0 14px 30px rgba(10,45,33,.11)}
+.pitchSideEyebrow{font-size:10px;letter-spacing:1.3px;font-weight:800;color:#a8dfcc;line-height:1.5;margin-bottom:14px}
+.pitchStep{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.pitchNumber{font-size:12px;font-weight:800;color:#83d8b9;padding-top:3px}
+.pitchStep strong{display:block;font-size:15px;line-height:1.35}
+.pitchStep p{font-size:12px;line-height:1.55;color:#d3e5dc;margin:5px 0 0}
+.pitchTruth{font-size:11px;line-height:1.6;color:#c6e3d6;padding-top:17px}
+.pitchTruth strong{color:#fff}
+.workspaceIntro{scroll-margin-top:20px;display:flex;align-items:end;justify-content:space-between;gap:24px;border-top:1px solid var(--border);padding-top:27px}
+.workspaceIntro h2{font-size:clamp(23px,2.6vw,31px);letter-spacing:-.8px;line-height:1.2;margin:8px 0 0}
+.workspaceIntro h2 span{color:var(--accent)}
+.workspaceIntro p{font-size:12px;line-height:1.6;color:var(--muted);max-width:300px;margin:0 0 3px}
+@media(max-width:900px){.heroPitch{grid-template-columns:1fr;gap:22px;padding:34px 0 30px}.heroPitchSide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:20px}.pitchSideEyebrow,.pitchTruth{grid-column:1/-1}.pitchStep{grid-template-columns:1fr;border-bottom:0;border-right:1px solid rgba(255,255,255,.14);padding:6px 12px 6px 0}.pitchStep:nth-of-type(4){border-right:0}.workspaceIntro{align-items:start}}
+@media(max-width:620px){.heroPitch h1{font-size:clamp(34px,9vw,46px);letter-spacing:-1.6px}.heroPitchSide{display:block;padding:21px}.pitchStep{display:grid;grid-template-columns:32px 1fr;border-right:0;border-bottom:1px solid rgba(255,255,255,.14);padding:12px 0}.workspaceIntro{display:block}.workspaceIntro p{margin:9px 0 0}.heroMicro{max-width:none}}
